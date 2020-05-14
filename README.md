@@ -10,6 +10,8 @@ Put this plugin files into $HOME/.vim directory.
 
 ```vim
 :ImportSass
+:UseSass
+:ForwardSass
 ```
 
 ## License

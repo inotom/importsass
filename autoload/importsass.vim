@@ -1,9 +1,9 @@
 "
 " File: autoload/importsass.vim
 " file created in 2019/12/07 12:58:48.
-" LastUpdated: 2019/12/07 14:08:10.
+" LastUpdated: 2020/05/14 14:53:35.
 " Author: iNo <wdf7322@yahoo.co.jp>
-" Version: 1.0
+" Version: 1.1
 " License: MIT License {{{
 "   Permission is hereby granted, free of charge, to any person obtaining
 "   a copy of this software and associated documentation files (the
@@ -42,7 +42,8 @@ function! s:existImportCode(fpath, codeStr)
   return 0
 endfunction
 
-function! importsass#importSass()
+function! importsass#importSass(type)
+
   " Open file name (excluding extension).
   let s:current_file_basename = expand("%:r")
   " Directory path of the currently open file.
@@ -50,7 +51,7 @@ function! importsass#importSass()
   " Full path of the _index.scss file.
   let s:index_scss_file_path = s:current_file_dir_path . "/_index.scss"
   " Code string to insert into the _index.scss file.
-  let s:import_code = "@import '" . substitute(s:current_file_basename, "^_", "", "" ) . "';"
+  let s:import_code = "@" . a:type . " '" . substitute(s:current_file_basename, "^_", "", "" ) . "';"
 
   if filewritable(s:index_scss_file_path)
     if s:existImportCode(s:index_scss_file_path, s:import_code) == 1

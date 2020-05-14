@@ -1,9 +1,9 @@
 "
 " File: plugin/importsass.vim
 " file created in 2019/12/07 12:58:48.
-" LastUpdated: 2019/12/07 14:06:35.
+" LastUpdated: 2020/05/14 14:53:59.
 " Author: iNo <wdf7322@yahoo.co.jp>
-" Version: 1.0
+" Version: 1.1
 " License: MIT License {{{
 "   Permission is hereby granted, free of charge, to any person obtaining
 "   a copy of this software and associated documentation files (the
@@ -34,7 +34,9 @@ let g:loaded_importsass = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-command! ImportSass call importsass#importSass()
+command! ImportSass call importsass#importSass('import')
+command! UseSass call importsass#importSass('use')
+command! ForwardSass call importsass#importSass('forward')
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
