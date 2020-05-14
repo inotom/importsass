@@ -1,9 +1,9 @@
 "
 " File: autoload/importsass.vim
 " file created in 2019/12/07 12:58:48.
-" LastUpdated: 2020/05/14 14:46:31.
+" LastUpdated: 2020/05/14 14:53:35.
 " Author: iNo <wdf7322@yahoo.co.jp>
-" Version: 1.0
+" Version: 1.1
 " License: MIT License {{{
 "   Permission is hereby granted, free of charge, to any person obtaining
 "   a copy of this software and associated documentation files (the
